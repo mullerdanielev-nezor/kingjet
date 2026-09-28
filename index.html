@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KingJet Europe – UV, DTF nyomtatók és vágógépek</title>
+<meta name="description" content="KingJet UV síkágyas, UV DTF, por nélküli DTF nyomtatók és vágóplotter nettó fix áron. Kérj ajánlatot!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KingJet Europe – UV, DTF nyomtatók és vágógépek nettó fix áron">
+<meta property="og:description" content="Hat KingJet gép telefontokra, akrilra, fára, textilre és matricára. Kérj ajánlatot!">
+<meta name="theme-color" content="#d90d1e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#d90d1e;--red-dark:#a00a16;--ink:#0a0a0a;--text:#333;--muted:#555;--line:#d6d6d6;--bg:#fff;--bg-alt:#f2f2f2;--chip:#efefef;--pad:80px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--red)}a:hover{color:var(--red-dark)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.display{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 28px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .15s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-dark);color:#fff}
+.btn-outline{background:#fff;color:var(--ink);border:3px solid var(--ink)}.btn-outline:hover{background:var(--ink);color:#fff}
+.bar{width:72px;height:8px;background:var(--red);margin-bottom:28px}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:6px solid var(--red)}
+header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:30px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo span{color:var(--red)}.logo small{font-style:normal;font-weight:700;font-size:19px;color:var(--muted);letter-spacing:3px;margin-left:4px}
+nav{display:flex;align-items:center;gap:32px;font-weight:500}
+nav a.link{color:var(--ink);text-decoration:none}nav a.link:hover{color:var(--red)}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,620px) minmax(0,1fr);gap:56px;padding-top:64px;padding-bottom:72px;align-items:stretch}
+.hero-text{display:flex;flex-direction:column;justify-content:center;gap:26px}
+.eyebrow{font-size:15px;font-weight:700;letter-spacing:3px;color:var(--red)}
+.hero h1{font-weight:700;font-size:68px;line-height:1}
+.hero p{margin:0;font-size:20px;color:var(--text)}
+.ctas{display:flex;flex-wrap:wrap;gap:16px}
+.facts{display:flex;flex-wrap:wrap;gap:40px;padding-top:6px}
+.facts b{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:32px;line-height:1.1}
+.facts small{font-size:14px;color:var(--muted)}
+.hero-img{border:3px solid var(--ink);background:var(--bg-alt);min-height:460px;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+/* products */
+.products{background:var(--bg-alt);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:64px 0 80px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head h2,.compare h2,.quote h2{font-weight:700;font-size:60px;line-height:1}
+.note{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.card{background:#fff;border:3px solid var(--ink);display:flex;flex-direction:column}
+.card-img{position:relative;aspect-ratio:4/3;background:var(--bg-alt);border-bottom:3px solid var(--ink);overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:16px;left:16px;background:var(--red);color:#fff;font-size:13px;font-weight:700;letter-spacing:1.5px;padding:7px 12px}
+.card-body{padding:26px 28px 28px;display:flex;flex-direction:column;gap:18px;flex-grow:1}
+.card h3{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:30px;line-height:1.05;margin:0 0 6px;min-height:63px}
+.card .lead{color:var(--text);min-height:46px;margin:0}
+.specs{margin:0;border-top:2px solid var(--ink)}
+.specs div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.specs dt{color:var(--muted)}.specs dd{margin:0;font-weight:600;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-size:13px;font-weight:600;padding:6px 10px;background:var(--chip);border-left:4px solid var(--red)}
+.spacer{flex-grow:1}
+.price{display:flex;align-items:baseline;gap:8px;font-style:italic}
+.price b{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:40px;line-height:1}
+.price small{font-size:16px;color:var(--muted);font-weight:600}
+.card .btn{width:100%;text-transform:uppercase;letter-spacing:1px}
+
+/* compare */
+.compare{padding:72px 0}
+.compare h2{margin-bottom:32px}
+.table-scroll{overflow-x:auto;border:3px solid var(--ink)}
+table{width:100%;border-collapse:collapse;min-width:900px}
+th{background:var(--ink);color:#fff;text-align:left;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:16px 20px}
+td{padding:18px 20px;border-top:2px solid var(--ink);color:#222;white-space:nowrap}
+td:first-child{font-weight:600;color:var(--ink)}
+th:last-child,td:last-child{text-align:right}td:last-child{font-weight:700;color:var(--ink)}
+
+/* quote */
+.quote{background:var(--bg-alt);border-top:3px solid var(--ink);padding:72px 0}
+.quote .wrap{display:grid;grid-template-columns:440px minmax(0,1fr);gap:64px}
+.quote-info{display:flex;flex-direction:column;gap:24px}
+.quote-info h2{font-size:64px}
+.quote-info p{margin:0;font-size:19px;color:var(--text)}
+.contact{display:flex;flex-direction:column;gap:14px;font-size:18px}
+.contact a{color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px}
+.contact a:hover{color:var(--red)}
+form,.thanks{background:#fff;border:3px solid var(--ink);padding:40px}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+label{display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:700}
+.full{grid-column:1/-1}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;min-height:52px;padding:0 16px;background:#fff;border:2px solid var(--ink);border-radius:0;color:var(--ink);font:inherit;font-size:16px;font-weight:400}
+textarea{padding:14px 16px;resize:vertical;min-height:110px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--red);outline-offset:0}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.check{flex-direction:row;align-items:center;gap:10px;font-weight:400;font-size:14px;color:var(--text)}
+.check input{width:20px;height:20px;flex-shrink:0;accent-color:var(--red)}
+.thanks{display:none;flex-direction:column;justify-content:center;gap:12px}
+.thanks b{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:40px;color:var(--red)}
+.thanks p{margin:0;font-size:19px;color:var(--text)}
+
+/* footer */
+footer{border-top:3px solid var(--ink);padding:40px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+footer .logo{font-size:22px}
+footer .legal{margin-top:6px}
+footer nav{gap:28px}footer nav a{color:var(--muted)}
+
+/* responsive */
+@media (max-width:1100px){
+  :root{--pad:40px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero-img{min-height:0;aspect-ratio:4/3}
+  .quote .wrap{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:720px){
+  :root{--pad:16px}
+  header .wrap{height:64px}
+  .logo{font-size:24px}.logo small{font-size:15px;letter-spacing:2px}
+  nav .link{display:none}
+  nav .btn{padding:10px 14px;font-size:14px;min-height:44px;white-space:nowrap}
+  .hero .wrap{padding-top:36px;padding-bottom:48px}
+  .hero h1{font-size:44px}
+  .hero p{font-size:18px}
+  .ctas .btn{flex:1 1 100%}
+  .facts{gap:24px}.facts b{font-size:26px}
+  .products,.compare,.quote{padding:48px 0}
+  .sec-head h2,.compare h2,.quote-info h2{font-size:36px}
+  .display{overflow-wrap:break-word;hyphens:auto}
+  .grid{grid-template-columns:1fr;gap:24px}
+  .card h3,.card .lead{min-height:0}
+  .card-body{padding:22px 20px 24px}
+  form,.thanks{padding:24px 20px;grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .form-foot .btn{width:100%}
+  footer nav{gap:20px}
+}
+
+/* card actions + product modal */
+.card-actions{display:flex;flex-direction:column;gap:10px}
+.card-img img,.card-img{cursor:pointer}
+dialog.pm{border:3px solid var(--ink);border-top:8px solid var(--red);padding:0;max-width:760px;width:calc(100% - 32px);max-height:calc(100vh - 32px);background:#fff;color:var(--ink);overflow:auto}
+dialog.pm::backdrop{background:rgba(0,0,0,.6)}
+.pm-in{padding:32px 36px 36px;display:flex;flex-direction:column;gap:18px}
+.pm-x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:var(--ink);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.pm-x:hover{background:var(--red)}
+.pm h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:40px;line-height:1;margin:0;padding-right:44px}
+.pm p{margin:0;font-size:17px;color:var(--text)}
+.pm h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:22px;margin:4px 0 0;padding-top:12px;border-top:2px solid var(--ink)}
+.pm ul{margin:0;padding-left:20px;display:grid;gap:6px;color:var(--text);font-size:16px}
+.pm .price{margin-top:4px}
+.pm-cta{display:flex;flex-wrap:wrap;gap:12px}
+.pm-cta .btn{flex:1 1 200px}
+.pm .specs{margin:0}
+.form-msg{display:none;border:2px solid var(--red);background:#fdeaec;color:var(--ink);padding:12px 16px;font-size:15px}
+.form-msg.on{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+button[disabled]{opacity:.6;cursor:wait}
+footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inherit;cursor:pointer}footer nav button:hover{color:var(--red)}
+
+/* cookie banner */
+.kj-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:100;max-width:760px;margin:0 auto;background:#fff;border:3px solid var(--ink);border-top:8px solid var(--red);padding:20px 22px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.kj-cookie[hidden]{display:none}
+.kj-cookie b{font-family:'Barlow Condensed',sans-serif;font-size:24px;text-transform:uppercase;display:block;margin-bottom:6px}
+.kj-cookie p{margin:0 0 14px;font-size:15px;color:var(--text)}
+.kj-cookie .row{display:flex;flex-wrap:wrap;gap:10px}
+.kj-cookie .btn{min-height:44px;padding:10px 20px;font-size:15px}
+@media (max-width:720px){
+  .pm-in{padding:24px 20px 28px}.pm h3{font-size:32px}
+  .kj-cookie .btn{flex:1 1 100%}
+}
+
+/* UX + conversion */
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--ink);color:#fff;padding:10px 16px;text-decoration:none}
+.skip:focus{left:8px;color:#fff}
+.trust{background:var(--ink);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:22px;padding-bottom:22px}
+.trust div{display:flex;flex-direction:column;gap:2px;border-left:4px solid var(--red);padding-left:14px}
+.trust b{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:.5px}
+.trust span{font-size:14px;color:#cfcfcf}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:-16px 0 32px}
+.filters span{font-weight:700;font-size:15px;margin-right:4px}
+.filters button{font:inherit;font-weight:600;font-size:15px;min-height:44px;padding:8px 16px;background:#fff;border:2px solid var(--ink);cursor:pointer;color:var(--ink)}
+.filters button:hover{background:var(--chip)}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff}
+.card[hidden]{display:none}
+.tbl-link{background:none;border:0;padding:0;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px;text-decoration-thickness:2px;white-space:nowrap}
+.tbl-link:hover{color:var(--red)}
+.how{padding:72px 0;background:#fff}
+.how h2,.faq h2{font-weight:700;font-size:60px;line-height:1;margin-bottom:32px}
+.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;counter-reset:s}
+.how li{border:3px solid var(--ink);padding:28px;position:relative;counter-increment:s;background:#fff}
+.how li::before{content:counter(s);position:absolute;top:-3px;left:-3px;width:52px;height:52px;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:32px;display:flex;align-items:center;justify-content:center}
+.how li b{display:block;margin:34px 0 8px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:28px;text-transform:uppercase}
+.how li p{margin:0;color:var(--text);font-size:17px}
+.faq{padding:72px 0;background:var(--bg-alt);border-top:3px solid var(--ink)}
+.faq .wrap{max-width:1000px}
+.faq details{background:#fff;border:3px solid var(--ink);margin-bottom:12px}
+.faq summary{cursor:pointer;padding:18px 56px 18px 22px;font-weight:700;font-size:18px;list-style:none;position:relative;min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--red);font-weight:400}
+.faq details[open] summary::after{content:'\2212'}
+.faq details p{margin:0;padding:0 22px 20px;color:var(--text);font-size:17px}
+.pick{display:none;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;background:var(--bg-alt);border-left:6px solid var(--red);font-size:15px}
+.pick.on{display:flex}
+.pick b{font-size:16px}.pick span{font-weight:700}
+.company{font-style:normal;display:flex;flex-direction:column;gap:4px;padding:16px 18px;background:#fff;border-left:6px solid var(--red);font-size:15px;color:var(--text)}
+.company b{font-size:17px;color:var(--ink)}
+.reassure{font-size:14px;color:var(--muted);margin:0}
+.reassure a{color:var(--ink);font-weight:600}
+.msticky{display:none}
+@media (max-width:1100px){
+  .trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .how ol{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .how,.faq{padding:48px 0}
+  .how h2,.faq h2{font-size:36px}
+  .trust .wrap{gap:16px}
+  .trust b{font-size:19px}
+  .filters{margin-top:-8px}
+  body{padding-bottom:76px}
+  .msticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;gap:8px;padding:10px 12px;background:#fff;border-top:3px solid var(--ink);transition:transform .2s}
+  .msticky.off{transform:translateY(110%)}
+  .msticky .btn{flex:1;min-height:52px;padding:10px 12px;font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Ugrás a tartalomra</a>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">KING<span>JET</span> <small>EUROPE</small></a>
+    <nav>
+      <a class="link" href="#gepek">Gépek</a>
+      <a class="link" href="#osszehasonlitas">Összehasonlítás</a>
+      <a class="link" href="#gyik">GYIK</a>
+      <a class="link" href="tel:+36203639271">+36 20 363 9271</a>
+      <a class="btn btn-red" href="#ajanlat">Ajánlatot kérek</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="eyebrow">UV · DTF · VÁGÓPLOTTER</div>
+      <h1 class="display">Ipari nyomtatók és vágógépek, nettó fix áron</h1>
+      <p>Hat KingJet gép telefontokra, akrilra, fára, textilre és matricára. Válaszd ki a géped, és küldjük a pontos ajánlatot.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#ajanlat">Ajánlatot kérek</a>
+        <a class="btn btn-outline" href="#gepek">Gépek és árak</a>
+      </div>
+      <div class="facts">
+        <div><b>2,5 M Ft-tól</b><small>nettó, + ÁFA</small></div>
+        <div><b>6 gép</b><small>UV, DTF, vágás</small></div>
+        <div><b>Epson i3200</b><small>nyomtatófejek</small></div>
+      </div>
+    </div>
+    <div class="hero-img"><img src="images/hero-uv-sikagyas-120x120.webp" alt="KingJet 120×120 cm UV síkágyas nyomtató" width="1000" height="750"></div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Miért a KingJet Europe">
+  <div class="wrap">
+    <div><b>Nettó fix ár</b><span>Minden ár + 27% ÁFA, átláthatóan</span></div>
+    <div><b>Epson i3200 fejek</b><span>Ipari nyomtatófejek a nyomtatókban</span></div>
+    <div><b>Szállítás és telepítés</b><span>A részleteket egyeztetjük veled</span></div>
+    <div><b>Magyar cég</b><span>Zeusz Group Kft., Budapest</span></div>
+  </div>
+</section>
+
+<section class="products" id="gepek">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="bar"></div><h2 class="display">Gépek és árak</h2></div>
+      <div class="note">Minden ár nettó, + 27% ÁFA</div>
+    </div>
+    <div class="filters" role="group" aria-label="Szűrés felhasználás szerint">
+      <span>Mire keresel gépet?</span>
+      <button type="button" data-f="all" aria-pressed="true">Mind</button>
+      <button type="button" data-f="telefontok" aria-pressed="false">Telefontok</button>
+      <button type="button" data-f="textil" aria-pressed="false">Textil</button>
+      <button type="button" data-f="tabla" aria-pressed="false">Akril, fa, tábla</button>
+      <button type="button" data-f="matrica" aria-pressed="false">Matricák</button>
+    </div>
+    <div class="grid">
+      <article class="card" data-cat="matrica">
+        <div class="card-img" data-info="plotter"><img src="images/vagoplotter-sikagyas.webp" alt="Síkágyas vágóplotter" loading="lazy" width="900" height="675"><span class="tag">VÁGÓPLOTTER</span></div>
+        <div class="card-body">
+          <div><h3>Síkágyas vágóplotter</h3><p class="lead">Matricák és címkék pontos kontúrvágása nagy íven.</p></div>
+          <dl class="specs"><div><dt>Vágóasztal</dt><dd>70 × 90 cm</dd></div><div><dt>Típus</dt><dd>Síkágyas vágóasztal</dd></div><div><dt>Felhasználás</dt><dd>Kontúrvágás</dd></div></dl>
+          <ul class="chips"><li>Matricák</li><li>Címkék</li><li>Formára vágás</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>2 500 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="plotter">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="plotter">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="textil">
+        <div class="card-img" data-info="dtf"><img src="images/dtf-por-nelkuli.webp" alt="Por nélküli DTF nyomtató" loading="lazy" width="900" height="675"><span class="tag">DTF</span></div>
+        <div class="card-body">
+          <div><h3>Por nélküli DTF nyomtató</h3><p class="lead">Textilnyomás porozás nélkül, 60 cm-es tekercsről.</p></div>
+          <dl class="specs"><div><dt>Nyomtatási szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200</dd></div><div><dt>Technológia</dt><dd>Por nélküli DTF</dd></div></dl>
+          <ul class="chips"><li>Pólók</li><li>Pulóverek</li><li>Textil</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>5 900 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="dtf">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="dtf">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="telefontok tabla matrica">
+        <div class="card-img" data-info="uv6090"><img src="images/uv-nyomtato-kj-6090p.webp" alt="KingJet KJ-6090P UV nyomtató" loading="lazy" width="900" height="675"><span class="tag">UV SÍKÁGY</span></div>
+        <div class="card-body">
+          <div><h3>KingJet KJ-6090P UV nyomtató</h3><p class="lead">Síkágyas és tekercses UV nyomtatás egy gépen.</p></div>
+          <dl class="specs"><div><dt>Síkágy</dt><dd>60 × 90 cm</dd></div><div><dt>Tekercses nyomtatás</dt><dd>Akár 60 cm</dd></div><div><dt>Tinta</dt><dd>CMYK + fehér + lakk</dd></div></dl>
+          <ul class="chips"><li>Telefontok</li><li>Akril tábla</li><li>Fa doboz</li><li>UV DTF matrica</li><li>Bögre, toll (kiegészítővel)</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>6 900 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="uv6090">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="uv6090">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="textil">
+        <div class="card-img" data-info="tpu"><img src="images/uv-dtf-kj-604luv.webp" alt="KingJet KJ-604LUV" loading="lazy" width="900" height="675"><span class="tag">UV DTF</span></div>
+        <div class="card-body">
+          <div><h3>KingJet KJ-604LUV</h3><p class="lead">3D hímzéshatású textillogók és TPU felvarrók.</p></div>
+          <dl class="specs"><div><dt>Szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Tinta</dt><dd>CMYK + W + W + V</dd></div></dl>
+          <ul class="chips"><li>Sportmez</li><li>Sapka</li><li>Táska</li><li>Kabát felvarró</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>6 900 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="tpu">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="tpu">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="telefontok matrica">
+        <div class="card-img" data-info="gold"><img src="images/uv-dtf-kj-604guv-arany.webp" alt="KingJet KJ-604GUV aranyhatású" loading="lazy" width="900" height="675"><span class="tag">UV DTF</span></div>
+        <div class="card-body">
+          <div><h3>KingJet KJ-604GUV aranyhatású</h3><p class="lead">Arany fóliahatású UV DTF matricák prémium termékekre.</p></div>
+          <dl class="specs"><div><dt>Szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Effekt</dt><dd>Aranyhatás</dd></div></dl>
+          <ul class="chips"><li>Telefontok</li><li>Bögre</li><li>Akril termékek</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>6 900 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="gold">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="gold">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="tabla">
+        <div class="card-img" data-info="uv120"><img src="images/uv-sikagyas-120x120.webp" alt="KingJet UV síkágyas 120 × 120" loading="lazy" width="900" height="675"><span class="tag">UV SÍKÁGY</span></div>
+        <div class="card-body">
+          <div><h3>KingJet UV síkágyas 120 × 120</h3><p class="lead">Nagy formátumú UV nyomtatás táblákra és lapanyagokra.</p></div>
+          <dl class="specs"><div><dt>Nyomtatási felület</dt><dd>120 × 120 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Technológia</dt><dd>UV síkágyas</dd></div></dl>
+          <ul class="chips"><li>Akril</li><li>Fa</li><li>Reklámtáblák</li><li>Dekor</li></ul>
+          <div class="spacer"></div>
+          <div class="price"><b>12 000 000 Ft</b><small>+ ÁFA</small></div>
+          <div class="card-actions"><button type="button" class="btn btn-outline" data-info="uv120">Részletek</button><a class="btn btn-red" href="#ajanlat" data-pick="uv120">Ajánlatot kérek</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="compare" id="osszehasonlitas">
+  <div class="wrap">
+    <div class="bar"></div>
+    <h2 class="display">Gyors összehasonlítás</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Gép</th><th>Technológia</th><th>Méret</th><th>Fejek</th><th>Tinta</th><th>Nettó ár</th></tr></thead>
+        <tbody>
+          <tr><td><button type="button" class="tbl-link" data-info="plotter">Síkágyas vágóplotter</button></td><td>Vágóplotter</td><td>70 × 90 cm</td><td>–</td><td>–</td><td>2 500 000 Ft</td></tr>
+          <tr><td><button type="button" class="tbl-link" data-info="dtf">Por nélküli DTF nyomtató</button></td><td>Por nélküli DTF</td><td>60 cm tekercs</td><td>4 × Epson i3200</td><td>–</td><td>5 900 000 Ft</td></tr>
+          <tr><td><button type="button" class="tbl-link" data-info="uv6090">KingJet KJ-6090P UV nyomtató</button></td><td>UV síkágy + tekercs</td><td>60 × 90 cm</td><td>–</td><td>CMYK + W + lakk</td><td>6 900 000 Ft</td></tr>
+          <tr><td><button type="button" class="tbl-link" data-info="tpu">KingJet KJ-604LUV</button></td><td>UV DTF, 3D / TPU</td><td>60 cm tekercs</td><td>4 × i3200-U1</td><td>CMYK + W + W + V</td><td>6 900 000 Ft</td></tr>
+          <tr><td><button type="button" class="tbl-link" data-info="gold">KingJet KJ-604GUV aranyhatású</button></td><td>UV DTF, aranyhatás</td><td>60 cm tekercs</td><td>4 × i3200-U1</td><td>–</td><td>6 900 000 Ft</td></tr>
+          <tr><td><button type="button" class="tbl-link" data-info="uv120">KingJet UV síkágyas 120 × 120</button></td><td>UV síkágy</td><td>120 × 120 cm</td><td>4 × i3200-U1</td><td>UV</td><td>12 000 000 Ft</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="folyamat">
+  <div class="wrap">
+    <div class="bar"></div>
+    <h2 class="display">Így működik</h2>
+    <ol>
+      <li><b>Válaszd ki a gépet</b><p>Nézd meg a gépeket és árakat, vagy szűrd őket aszerint, mire szeretnél nyomtatni.</p></li>
+      <li><b>Kérj ajánlatot</b><p>Töltsd ki az egyszerű űrlapot. Az ajánlatkérés nem jár vásárlási kötelezettséggel.</p></li>
+      <li><b>Egyeztetünk</b><p>Felvesszük veled a kapcsolatot a konfigurációval, szállítással és telepítéssel kapcsolatban.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="faq" id="gyik">
+  <div class="wrap">
+    <div class="bar"></div>
+    <h2 class="display">Gyakori kérdések</h2>
+    <details><summary>Az árak nettók?</summary><p>Igen, minden feltüntetett ár nettó, a 27% ÁFA ehhez jön hozzá.</p></details>
+    <details><summary>Az ajánlatkérés kötelez valamire?</summary><p>Nem. Az ajánlatkérés díjtalan és nem jár vásárlási kötelezettséggel.</p></details>
+    <details><summary>Mi a különbség az UV és a DTF nyomtató között?</summary><p>Az UV nyomtató közvetlenül keményebb felületekre (például akrilra, fára, telefontokra) nyomtat, és a tinta UV-fénnyel azonnal megszárad. A DTF nyomtató fóliára nyomtat, a mintát pedig hőprés viszi át a textilre.</p></details>
+    <details><summary>Mit jelent a por nélküli DTF?</summary><p>A hagyományos DTF-nél a nyomtatás után porozni kell a fóliát. A por nélküli technológiánál ez a lépés kimarad, így egyszerűbb a folyamat és tisztább a munkakörnyezet.</p></details>
+    <details><summary>Melyik gép való telefontokra?</summary><p>Telefontokra a KingJet KJ-6090P UV nyomtató és az arany hatású KJ-604GUV UV DTF gép is alkalmas. Írd meg az igényed, és segítünk kiválasztani a megfelelőt.</p></details>
+    <details><summary>Segítetek a szállításban és a telepítésben?</summary><p>Az ajánlatkérés után egyeztetjük veled a konfigurációt, a szállítást és a telepítést.</p></details>
+  </div>
+</section>
+
+<section class="quote" id="ajanlat">
+  <div class="wrap">
+    <div class="quote-info">
+      <div><div class="bar"></div><h2 class="display">Kérj ajánlatot</h2></div>
+      <p>Add meg, melyik gép érdekel, és felvesszük veled a kapcsolatot a konfigurációval, szállítással és telepítéssel kapcsolatban.</p>
+      <div class="contact">
+        <a href="tel:+36203639271"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+36 20 363 9271</a>
+        <a href="mailto:info@kingjeteurope.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@kingjeteurope.com</a>
+      </div>
+      <address class="company">
+        <b>Zeusz Group Kft.</b>
+        <span>Székhely: 1113 Budapest, Bartók Béla út 79. 2. em. 2. ajtó</span>
+        <span>Adószám: 33033026-2-43</span>
+        <span>Cégjegyzékszám: 01-09-455504</span>
+      </address>
+    </div>
+    <div>
+      <form id="quoteForm" action="https://formsubmit.co/mullerdanielev@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="Új ajánlatkérés – KingJet Europe">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Név *<input required type="text" name="nev" autocomplete="name"></label>
+        <label>Cégnév *<input required type="text" name="ceg" autocomplete="organization"></label>
+        <label class="full">Cég székhelye *<input required type="text" name="szekhely" autocomplete="street-address" placeholder="Irányítószám, település, utca, házszám"></label>
+        <label>Telefonszám *<input required type="tel" name="telefon" autocomplete="tel" inputmode="tel" placeholder="+36 20 123 4567"></label>
+        <label>E-mail *<input required type="email" name="email" autocomplete="email"></label>
+        <label class="full">Melyik gép érdekel? *
+          <select required name="gep" id="gep">
+            <option value="">Válassz gépet…</option>
+            <option value="plotter">Síkágyas vágóplotter – 2 500 000 Ft + ÁFA</option>
+            <option value="dtf">Por nélküli DTF nyomtató – 5 900 000 Ft + ÁFA</option>
+            <option value="uv6090">KingJet KJ-6090P UV nyomtató – 6 900 000 Ft + ÁFA</option>
+            <option value="tpu">KingJet KJ-604LUV – 6 900 000 Ft + ÁFA</option>
+            <option value="gold">KingJet KJ-604GUV aranyhatású – 6 900 000 Ft + ÁFA</option>
+            <option value="uv120">KingJet UV síkágyas 120 × 120 – 12 000 000 Ft + ÁFA</option>
+            <option value="tobb">Több gép / még nem döntöttem</option>
+          </select>
+        </label>
+        <div class="full pick" id="pick" aria-live="polite"></div>
+        <label class="full">Mire használnád? (opcionális)<textarea name="uzenet" rows="4"></textarea></label>
+        <div class="full form-foot">
+          <label class="check"><input required type="checkbox" name="adatkezeles"><span>Elfogadom az <a href="adatvedelem.html" target="_blank">adatkezelési tájékoztatót</a>. *</span></label>
+          <button class="btn btn-red" type="submit">Ajánlatkérés elküldése</button>
+        </div>
+        <p class="full reassure">Az ajánlatkérés nem jár kötelezettséggel, az adataidat csak az ajánlatadáshoz használjuk. Inkább beszélnél valakivel? Hívj: <a href="tel:+36203639271">+36 20 363 9271</a></p>
+        <div class="full form-msg" id="formMsg" role="alert"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo">KING<span>JET</span> EUROPE</div>
+      <div class="legal">Zeusz Group Kft. · Székhely: 1113 Budapest, Bartók Béla út 79. 2. em. 2. ajtó · Adószám: 33033026-2-43 · Cégjegyzékszám: 01-09-455504</div>
+    </div>
+    <nav>
+      <a href="adatvedelem.html">Adatkezelés</a>
+      <a href="sutik.html">Süti tájékoztató</a>
+      <button type="button" data-cookie-settings>Sütibeállítások</button>
+    </nav>
+  </div>
+</footer>
+
+<dialog class="pm" id="pm" aria-labelledby="pmTitle">
+  <button type="button" class="pm-x" id="pmX" aria-label="Bezárás">&times;</button>
+  <div class="pm-in" id="pmBody"></div>
+</dialog>
+
+<div class="msticky" id="msticky">
+  <a class="btn btn-outline" href="tel:+36203639271">Hívj most</a>
+  <a class="btn btn-red" href="#ajanlat">Ajánlatot kérek</a>
+</div>
+
+<script src="site.js"></script>
+<script>
+(function(){
+  var P={
+    plotter:{
+      intro:['A síkágyas vágóplotter az elkészült matricák, címkék és szalagok pontos kontúrvágására való. A nyomtatott vagy fóliázott anyag az asztalon marad, a gép pedig a kívánt formára vágja, így kis és közepes szériához is gyors megoldás.','Jól kiegészíti az UV DTF és a többi nyomtatót: a kinyomtatott ívet a következő lépésben pontosan kivágja.'],
+      feat:['70 × 90 cm-es vágóasztal, nagy ívek kényelmes kezeléséhez','Pontos kontúrvágás bonyolultabb formákhoz is','Matricák, címkék, fóliák és hasonló lapanyagok feldolgozására'],
+      use:['Matricák és címkék gyártása','Formára vágott fóliák','Egyedi kontúrok nyomtatott anyagokon']
+    },
+    dtf:{
+      intro:['A por nélküli DTF nyomtató a textilnyomtatás modern módja: a mintát fóliára nyomtatod, majd hőprésel viszed át a ruhára. Ennél a típusnál kimarad a porozás és a kapcsolódó por, így tisztább a munkakörnyezet és egyszerűbb a folyamat.','A 60 cm széles tekercsről dolgozik, négy Epson i3200 nyomtatófejjel.'],
+      feat:['60 cm-es nyomtatási szélesség tekercsről','4 × Epson i3200 nyomtatófej','Por nélküli technológia: nincs külön porozó lépés'],
+      use:['Pólók és pulóverek','Egyedi textil ajándéktárgyak','Kis szériás ruházati gyártás']
+    },
+    uv6090:{
+      intro:['A KJ-6090P egy gépben egyesíti a síkágyas és a tekercses UV nyomtatást. A tinta UV-fénytől azonnal megszárad, így a nyomat rögtön kezelhető, és sokféle felületre nyomtathatsz.','Ez a legsokoldalúbb belépő a személyre szabott termékek gyártásához.'],
+      feat:['60 × 90 cm-es síkágy','Tekercses nyomtatás akár 60 cm szélességben','CMYK + fehér + lakk tinta: fehér alapozás és fényes lakkos kiemelés','UV DTF matricák nyomtatása'],
+      use:['Telefontokok','Akril táblák','Fa dobozok','UV DTF matricák','Bögre, toll (kiegészítővel)']
+    },
+    tpu:{
+      intro:['A KJ-604LUV textilekre szánt, 3D hatású logók és TPU felvarrók készítésére való. A nyomat kiemelkedő, hímzésre emlékeztető felületet kap, ezért prémium megjelenést ad sportruházatnak és kiegészítőknek.','A 60 cm széles tekercses gép négy Epson i3200-U1 nyomtatófejjel dolgozik.'],
+      feat:['60 cm-es nyomtatási szélesség','4 × Epson i3200-U1 nyomtatófej','CMYK + W + W + V tintakonfiguráció','3D hímzéshatású, TPU alapú felvarrók'],
+      use:['Sportmezek','Sapkák','Táskák','Kabát felvarrók']
+    },
+    gold:{
+      intro:['A KJ-604GUV arany fóliahatású UV DTF matricák gyártására való. Az arany hatás igényes, csillogó megjelenést ad, így a termékek hangsúlyosan kiemelkednek.','A matrica felragasztható különféle felületekre, ezért kis szériában is gyorsan előállítható prémium termék.'],
+      feat:['60 cm-es nyomtatási szélesség','4 × Epson i3200-U1 nyomtatófej','Arany fóliahatású UV DTF matricák'],
+      use:['Telefontokok','Bögrék','Akril termékek']
+    },
+    uv120:{
+      intro:['A 120 × 120 cm-es UV síkágyas nyomtató nagy formátumú táblák és lapanyagok közvetlen nyomtatására szolgál. A nagy méretű asztal miatt egész táblák, dekorlapok vagy több kisebb munka is elfér egyszerre.','Négy Epson i3200-U1 nyomtatófejjel, UV-tintával dolgozik, a nyomat azonnal megszárad.'],
+      feat:['120 × 120 cm-es nyomtatási felület','4 × Epson i3200-U1 nyomtatófej','UV síkágyas technológia, azonnali száradás'],
+      use:['Akril','Fa','Reklámtáblák','Dekorációs elemek']
+    }
+  };
+  var dlg=document.getElementById('pm'),body=document.getElementById('pmBody');
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function li(a){return a.map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
+  function open(key){
+    var d=P[key],card=document.querySelector('[data-pick="'+key+'"]').closest('.card');
+    if(!d||!card)return;
+    var h='<h3 id="pmTitle">'+esc(card.querySelector('h3').textContent)+'</h3>';
+    h+=d.intro.map(function(p){return '<p>'+esc(p)+'</p>';}).join('');
+    h+='<h4>Fő jellemzők</h4><ul>'+li(d.feat)+'</ul>';
+    h+='<h4>Mire használható?</h4><ul>'+li(d.use)+'</ul>';
+    h+='<h4>Műszaki adatok</h4><dl class="specs">'+card.querySelector('.specs').innerHTML+'</dl>';
+    h+='<div class="price">'+card.querySelector('.price').innerHTML+'</div>';
+    h+='<div class="pm-cta"><a class="btn btn-red" href="#ajanlat" data-pick="'+key+'">Ajánlatot kérek</a><a class="btn btn-outline" href="tel:+36203639271">Hívj most</a></div>';
+    body.innerHTML=h;
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+  }
+  function close(){if(dlg.close)dlg.close();else dlg.removeAttribute('open');}
+  document.querySelectorAll('[data-info]').forEach(function(el){
+    el.addEventListener('click',function(){open(el.getAttribute('data-info'));});
+  });
+  document.getElementById('pmX').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){
+    if(e.target===dlg||e.target.hasAttribute('data-close')){close();return;}
+    var a=e.target.closest&&e.target.closest('[data-pick]');
+    if(a){document.getElementById('gep').value=a.getAttribute('data-pick');close();}
+  });
+
+  var sel=document.getElementById('gep');
+  document.querySelectorAll('.card [data-pick]').forEach(function(a){
+    a.addEventListener('click',function(){sel.value=a.getAttribute('data-pick');});
+  });
+
+
+  // szűrők
+  var fbtns=document.querySelectorAll('.filters [data-f]');
+  fbtns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var f=b.getAttribute('data-f');
+      fbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      document.querySelectorAll('.grid .card').forEach(function(c){
+        c.hidden=!(f==='all'||(' '+c.getAttribute('data-cat')+' ').indexOf(' '+f+' ')>-1);
+      });
+    });
+  });
+
+  // kiválasztott gép összefoglaló + előválasztás URL-ből
+  var pick=document.getElementById('pick');
+  function showPick(){
+    var k=sel.value,card=k&&document.querySelector('.grid [data-pick="'+k+'"]');
+    if(card){card=card.closest('.card');pick.innerHTML='<b>'+esc(card.querySelector('h3').textContent)+'</b><span>'+esc(card.querySelector('.price b').textContent)+' + ÁFA</span>';pick.classList.add('on');}
+    else{pick.classList.remove('on');pick.innerHTML='';}
+  }
+  sel.addEventListener('change',showPick);
+  document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){setTimeout(showPick,0);});});
+  try{var q=new URLSearchParams(location.search).get('gep');if(q&&P[q]){sel.value=q;}}catch(e){}
+  showPick();
+
+  // mobil sticky sáv elrejtése az űrlapnál
+  var ms=document.getElementById('msticky'),qs=document.getElementById('ajanlat');
+  if(ms&&qs&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ms.classList.toggle('off',en[0].isIntersecting);},{threshold:.15}).observe(qs);
+  }
+
+  var form=document.getElementById('quoteForm'),msg=document.getElementById('formMsg');
+  var btn=form.querySelector('button[type=submit]');
+  function fail(){
+    msg.textContent='Az űrlap elküldése nem sikerült. Kérjük, próbáld újra, vagy hívj minket: +36 20 363 9271, illetve írj ide: info@kingjeteurope.com';
+    msg.classList.add('on');btn.disabled=false;btn.textContent='Ajánlatkérés elküldése';
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.classList.remove('on');
+    if(form.elements._honey.value){window.location.href='koszonjuk.html';return;}
+    btn.disabled=true;btn.textContent='Küldés…';
+    var fd=new FormData(form);
+    fd.set('gep',sel.options[sel.selectedIndex].text);
+    try{var sp=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){if(sp.get(k))fd.set(k,sp.get(k));});}catch(e){}
+    fd.set('oldal',location.href.split('#')[0]);if(document.referrer)fd.set('hivatkozo',document.referrer);
+    fd.delete('adatkezeles');fd.set('adatkezelesi tajekoztato elfogadva','igen');
+    fetch('https://formsubmit.co/ajax/mullerdanielev@gmail.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){
+        if(x.ok&&String(x.j.success)!=='false')window.location.href='koszonjuk.html';else fail();
+      })
+      .catch(fail);
+  });
+})();
+</script>
+</body>
+</html>

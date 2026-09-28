@@ -1,0 +1,63 @@
+:root{--red:#d90d1e;--red-dark:#a00a16;--ink:#0a0a0a;--text:#333;--muted:#555;--line:#d6d6d6;--bg:#fff;--bg-alt:#f2f2f2;--chip:#efefef;--pad:80px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Barlow',system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+img{max-width:100%;display:block}
+a{color:var(--red)}a:hover{color:var(--red-dark)}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad);width:100%}
+.display{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 28px;font-weight:700;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .15s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-dark);color:#fff}
+.btn-outline{background:#fff;color:var(--ink);border:3px solid var(--ink)}.btn-outline:hover{background:var(--ink);color:#fff}
+.bar{width:72px;height:8px;background:var(--red);margin-bottom:28px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:6px solid var(--red)}
+header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:30px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo span{color:var(--red)}.logo small{font-style:normal;font-weight:700;font-size:19px;color:var(--muted);letter-spacing:3px;margin-left:4px}
+nav{display:flex;align-items:center;gap:32px;font-weight:500}
+nav a.link{color:var(--ink);text-decoration:none}nav a.link:hover{color:var(--red)}
+main{flex:1}
+footer{border-top:3px solid var(--ink);padding:40px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+footer .logo{font-size:22px}
+footer .legal{margin-top:6px}
+footer nav{gap:28px;flex-wrap:wrap}footer nav a,footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inherit;cursor:pointer;text-decoration:underline}
+footer nav a:hover,footer nav button:hover{color:var(--red)}
+
+/* legal / message pages */
+.page{padding:64px 0 88px}
+.page .wrap{max-width:920px}
+.page h1{font-weight:700;font-size:56px;line-height:1;margin-bottom:12px}
+.page .updated{color:var(--muted);margin:0 0 36px}
+.page h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:28px;margin:40px 0 10px;padding-top:14px;border-top:3px solid var(--ink)}
+.page p,.page li{color:var(--text);font-size:17px}
+.page ul{padding-left:22px}
+.page table{min-width:0;margin:16px 0}
+.page th,.page td{white-space:normal;padding:12px 14px;font-size:15px;vertical-align:top}
+.page td{border-top:1px solid var(--line)}
+.page th:last-child,.page td:last-child{text-align:left;font-weight:400}
+.page .table-scroll{overflow-x:auto;border:3px solid var(--ink)}
+.page .table-scroll table{margin:0;min-width:640px}
+.msg{min-height:60vh;display:flex;align-items:center}
+.msg .code{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:180px;line-height:.9;color:var(--red);margin:0}
+.msg p.lead{font-size:21px;color:var(--text);max-width:620px;margin:0 0 28px}
+.msg .ctas{display:flex;flex-wrap:wrap;gap:16px}
+.steps{margin:0 0 32px;padding:0;list-style:none;display:grid;gap:12px;max-width:620px}
+.steps li{padding:14px 18px;background:var(--bg-alt);border-left:6px solid var(--red);font-size:17px}
+
+/* cookie banner */
+.kj-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:100;max-width:760px;margin:0 auto;background:#fff;border:3px solid var(--ink);border-top:8px solid var(--red);padding:20px 22px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.kj-cookie[hidden]{display:none}
+.kj-cookie b{font-family:'Barlow Condensed',sans-serif;font-size:24px;text-transform:uppercase;display:block;margin-bottom:6px}
+.kj-cookie p{margin:0 0 14px;font-size:15px;color:var(--text)}
+.kj-cookie .row{display:flex;flex-wrap:wrap;gap:10px}
+.kj-cookie .btn{min-height:44px;padding:10px 20px;font-size:15px}
+@media (max-width:720px){
+  :root{--pad:16px}
+  header .wrap{height:64px}
+  .logo{font-size:24px}.logo small{font-size:15px;letter-spacing:2px}
+  nav .link{display:none}
+  .page{padding:40px 0 64px}.page h1{font-size:40px}
+  .msg .code{font-size:120px}
+  .kj-cookie .btn{flex:1 1 100%}
+}
