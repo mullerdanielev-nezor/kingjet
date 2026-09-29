@@ -2,6 +2,9 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <!-- Meta Pixel Code -->
 <script>
 window._kjFbInit=function(){
@@ -55,8 +58,9 @@ a{color:var(--red)}a:hover{color:var(--red-dark)}
 /* header */
 header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:6px solid var(--red)}
 header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:30px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo{display:inline-flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:30px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .logo span{color:var(--red)}.logo small{font-style:normal;font-weight:700;font-size:19px;color:var(--muted);letter-spacing:3px;margin-left:4px}
+.logo-badge{width:38px;height:38px;border-radius:50%;flex-shrink:0}
 nav{display:flex;align-items:center;gap:32px;font-weight:500}
 nav a.link{color:var(--ink);text-decoration:none}nav a.link:hover{color:var(--red)}
 
@@ -103,7 +107,13 @@ nav a.link{color:var(--ink);text-decoration:none}nav a.link:hover{color:var(--re
 
 /* compare */
 .compare{padding:72px 0}
-.compare h2{margin-bottom:32px}
+.compare h2{margin-bottom:0}
+.compare-details summary{cursor:pointer;list-style:none;position:relative;padding-right:64px;margin-bottom:32px}
+.compare-details summary::-webkit-details-marker{display:none}
+.compare-details summary::after{content:'+';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:44px;line-height:1;color:var(--red);font-weight:400}
+.compare-details[open] summary::after{content:'\2212'}
+.compare-details:not([open]) summary{margin-bottom:0}
+.compare-details summary:hover h2{color:var(--red)}
 .table-scroll{overflow-x:auto;border:3px solid var(--ink)}
 table{width:100%;border-collapse:collapse;min-width:900px}
 th{background:var(--ink);color:#fff;text-align:left;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:16px 20px}
@@ -135,11 +145,14 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--red);outline-off
 .thanks p{margin:0;font-size:19px;color:var(--text)}
 
 /* footer */
-footer{border-top:3px solid var(--ink);padding:40px 0;font-size:14px;color:var(--muted)}
+footer{background:var(--ink);border-top:6px solid var(--red);padding:40px 0;font-size:14px;color:#b9b9b9}
 footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
-footer .logo{font-size:22px}
-footer .legal{margin-top:6px}
-footer nav{gap:28px}footer nav a{color:var(--muted)}
+footer .logo{font-size:22px;color:#fff}
+footer .logo small{color:#9a9a9a}
+footer .logo-badge{width:30px;height:30px}
+footer .legal{margin-top:6px;color:#9a9a9a}
+footer nav{gap:28px}footer nav a,footer nav button{color:#b9b9b9}
+footer nav a:hover,footer nav button:hover{color:#fff}
 
 /* responsive */
 @media (max-width:1100px){
@@ -311,7 +324,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">KING<span>JET</span> <small>EUROPE</small></a>
+    <a class="logo" href="#top"><img class="logo-badge" src="images/kingjet-badge.webp" alt="" width="76" height="76">KING<span>JET</span> <small>EUROPE</small></a>
     <nav>
       <a class="link" href="#gepek">Gépek</a>
       <a class="link" href="#osszehasonlitas">Összehasonlítás</a>
@@ -334,11 +347,6 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
       <div class="ctas">
         <a class="btn btn-red" href="#ajanlat">Lépjünk kapcsolatba!</a>
         <a class="btn btn-outline" href="#gepek">Gépek és árak</a>
-      </div>
-      <div class="facts">
-        <div><b>2,5 M Ft-tól</b><small>nettó, + ÁFA</small></div>
-        <div><b>6 gép</b><small>UV, DTF, vágás</small></div>
-        <div><b>Epson i3200</b><small>nyomtatófejek</small></div>
       </div>
     </div>
   </div>
@@ -441,7 +449,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         <b>Nem tudod, melyik gép illik hozzád?</b>
         <span>Írd meg, mire szeretnél nyomtatni, és mi segítünk kiválasztani a megfelelőt.</span>
       </div>
-      <a class="btn btn-red" href="#ajanlat">Kérj ingyenes ajánlatot</a>
+      <a class="btn btn-red" href="#ajanlat">Kérj tanácsot</a>
     </div>
   </div>
 </section>
@@ -449,7 +457,8 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 <section class="compare" id="osszehasonlitas">
   <div class="wrap">
     <div class="bar"></div>
-    <h2 class="display">Gyors összehasonlítás</h2>
+    <details class="compare-details">
+    <summary><h2 class="display">Gyors összehasonlítás</h2></summary>
     <div class="table-scroll">
       <table>
         <thead><tr><th>Gép</th><th>Technológia</th><th>Méret</th><th>Fejek</th><th>Tinta</th><th>Nettó ár</th></tr></thead>
@@ -463,6 +472,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </tbody>
       </table>
     </div>
+    </details>
   </div>
 </section>
 
@@ -541,7 +551,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label>Név *<input required type="text" name="nev" autocomplete="name"></label>
         <label>Cégnév *<input required type="text" name="ceg" autocomplete="organization"></label>
-        <label class="full">Cég székhelye *<input required type="text" name="szekhely" autocomplete="street-address" placeholder="Irányítószám, település, utca, házszám"></label>
+        <label>Cég székhelye (város) *<input required type="text" name="szekhely" autocomplete="address-level2" placeholder="pl. Budapest"></label>
         <label>Telefonszám *<input required type="tel" name="telefon" autocomplete="tel" inputmode="tel" placeholder="+36 20 123 4567"></label>
         <label>E-mail *<input required type="email" name="email" autocomplete="email"></label>
         <label class="full">Melyik gép érdekel? *
@@ -573,7 +583,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 <footer>
   <div class="wrap">
     <div>
-      <div class="logo">KING<span>JET</span> EUROPE</div>
+      <div class="logo"><img class="logo-badge" src="images/kingjet-badge.webp" alt="" width="60" height="60">KING<span>JET</span> EUROPE</div>
       <div class="legal">Zeusz Group Kft. · Székhely: 1113 Budapest, Bartók Béla út 79. 2. em. 2. ajtó · Adószám: 33033026-2-43 · Cégjegyzékszám: 01-09-455504</div>
     </div>
     <nav>
@@ -741,13 +751,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
       .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
       .then(function(x){
         if(x.ok&&String(x.j.success)!=='false'){
-          try{
-            if(window.fbq){
-              var eid='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2);
-              fbq('track','Lead',{content_name:'Ajánlatkérés',content_category:sel.value},{eventID:eid});
-            }
-          }catch(e){}
-          window.location.href='koszonjuk.html';
+          window.location.href='koszonjuk.html?gep='+encodeURIComponent(sel.value||'');
         }else{delete form.dataset.submitting;fail();}
       })
       .catch(function(){delete form.dataset.submitting;fail();});
