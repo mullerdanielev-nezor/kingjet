@@ -148,7 +148,8 @@ footer nav{gap:28px}footer nav a{color:var(--muted)}
 dialog.pm{border:3px solid var(--ink);border-top:8px solid var(--red);padding:0;max-width:760px;width:calc(100% - 32px);max-height:calc(100vh - 32px);background:#fff;color:var(--ink);overflow:auto}
 dialog.pm::backdrop{background:rgba(0,0,0,.6)}
 .pm-in{padding:32px 36px 36px;display:flex;flex-direction:column;gap:18px}
-.pm-x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:var(--ink);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.pm-img{width:calc(100% + 72px);margin:-32px -36px 4px;display:block;aspect-ratio:4/3;object-fit:cover;background:var(--bg-alt);border-bottom:3px solid var(--ink)}
+.pm-x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:var(--ink);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}
 .pm-x:hover{background:var(--red)}
 .pm h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:40px;line-height:1;margin:0;padding-right:44px}
 .pm p{margin:0;font-size:17px;color:var(--text)}
@@ -173,6 +174,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 .kj-cookie .btn{min-height:44px;padding:10px 20px;font-size:15px}
 @media (max-width:720px){
   .pm-in{padding:24px 20px 28px}.pm h3{font-size:32px}
+  .pm-img{width:calc(100% + 40px);margin:-24px -20px 4px}
   .kj-cookie .btn{flex:1 1 100%}
 }
 
@@ -213,6 +215,14 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 .pick b{font-size:16px}.pick span{font-weight:700}
 .company{font-style:normal;display:flex;flex-direction:column;gap:4px;padding:16px 18px;background:#fff;border-left:6px solid var(--red);font-size:15px;color:var(--text)}
 .company b{font-size:17px;color:var(--ink)}
+.cta-band{background:var(--ink);border-top:3px solid var(--ink);padding:48px 0}
+.cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-band h3{color:#fff;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:600;font-size:32px;margin:0 0 6px;line-height:1.1}
+.cta-band p{color:#cfcfcf;margin:0;font-size:16px}
+.cta-band .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.cta-band .btn-outline{background:transparent;color:#fff;border-color:#fff}
+.cta-band .btn-outline:hover{background:#fff;color:var(--ink)}
+.cta-inline{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:36px;padding-top:28px;border-top:2px solid var(--line);font-size:16px;color:var(--text)}
 .reassure{font-size:14px;color:var(--muted);margin:0}
 .reassure a{color:var(--ink);font-weight:600}
 .msticky{display:none}
@@ -223,6 +233,10 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 @media (max-width:720px){
   .how,.faq{padding:48px 0}
   .how h2,.faq h2{font-size:36px}
+  .cta-band{padding:32px 0;text-align:center}
+  .cta-band .wrap{justify-content:center;text-align:center}
+  .cta-band .ctas{justify-content:center;width:100%}
+  .cta-band .ctas .btn{flex:1 1 auto}
   .trust .wrap{gap:16px}
   .trust b{font-size:19px}
   .filters{margin-top:-8px}
@@ -362,6 +376,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
     </div>
+    <p class="cta-inline">Nem tudod, melyik gép illik hozzád? <a href="#ajanlat">Kérj ingyenes ajánlatot</a>, és segítünk kiválasztani.</p>
   </div>
 </section>
 
@@ -385,6 +400,19 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
   </div>
 </section>
 
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h3>Segítünk kiválasztani a megfelelő gépet</h3>
+      <p>Írd meg, mire szeretnél nyomtatni, és pár percen belül visszajelzünk.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-red" href="#ajanlat">Ajánlatot kérek</a>
+      <a class="btn btn-outline" href="tel:+36203639271">+36 20 363 9271</a>
+    </div>
+  </div>
+</section>
+
 <section class="how" id="folyamat">
   <div class="wrap">
     <div class="bar"></div>
@@ -394,6 +422,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
       <li><b>Kérj ajánlatot</b><p>Töltsd ki az egyszerű űrlapot. Az ajánlatkérés nem jár vásárlási kötelezettséggel.</p></li>
       <li><b>Egyeztetünk</b><p>Felvesszük veled a kapcsolatot a konfigurációval, szállítással és telepítéssel kapcsolatban.</p></li>
     </ol>
+    <p class="cta-inline"><a class="btn btn-red" href="#ajanlat">Kezdjük: kérj ajánlatot</a></p>
   </div>
 </section>
 
@@ -407,6 +436,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
     <details><summary>Mit jelent a por nélküli DTF?</summary><p>A hagyományos DTF-nél a nyomtatás után porozni kell a fóliát. A por nélküli technológiánál ez a lépés kimarad, így egyszerűbb a folyamat és tisztább a munkakörnyezet.</p></details>
     <details><summary>Melyik gép való telefontokra?</summary><p>Telefontokra a KingJet KJ-6090P UV nyomtató és az arany hatású KJ-604GUV UV DTF gép is alkalmas. Írd meg az igényed, és segítünk kiválasztani a megfelelőt.</p></details>
     <details><summary>Segítetek a szállításban és a telepítésben?</summary><p>Az ajánlatkérés után egyeztetjük veled a konfigurációt, a szállítást és a telepítést.</p></details>
+    <p class="cta-inline">Nem találtad a válaszod? <a href="tel:+36203639271">Hívj minket</a>, vagy <a href="#ajanlat">kérj ajánlatot</a>.</p>
   </div>
 </section>
 
@@ -494,32 +524,38 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
     plotter:{
       intro:['A síkágyas vágóplotter az elkészült matricák, címkék és szalagok pontos kontúrvágására való. A nyomtatott vagy fóliázott anyag az asztalon marad, a gép pedig a kívánt formára vágja, így kis és közepes szériához is gyors megoldás.','Jól kiegészíti az UV DTF és a többi nyomtatót: a kinyomtatott ívet a következő lépésben pontosan kivágja.'],
       feat:['70 × 90 cm-es vágóasztal, nagy ívek kényelmes kezeléséhez','Pontos kontúrvágás bonyolultabb formákhoz is','Matricák, címkék, fóliák és hasonló lapanyagok feldolgozására'],
-      use:['Matricák és címkék gyártása','Formára vágott fóliák','Egyedi kontúrok nyomtatott anyagokon']
+      use:['Matricák és címkék gyártása','Formára vágott fóliák','Egyedi kontúrok nyomtatott anyagokon'],
+      who:['Matrica- és címkegyártóknak, akik a nyomtatott ívet pontosan, formára akarják vágni','UV DTF vagy más nyomtatóval már dolgozó vállalkozásoknak, kiegészítő gépként','Kis és közepes szériás megrendeléseket vállalóknak']
     },
     dtf:{
       intro:['A por nélküli DTF nyomtató a textilnyomtatás modern módja: a mintát fóliára nyomtatod, majd hőprésel viszed át a ruhára. Ennél a típusnál kimarad a porozás és a kapcsolódó por, így tisztább a munkakörnyezet és egyszerűbb a folyamat.','A 60 cm széles tekercsről dolgozik, négy Epson i3200 nyomtatófejjel.'],
       feat:['60 cm-es nyomtatási szélesség tekercsről','4 × Epson i3200 nyomtatófej','Por nélküli technológia: nincs külön porozó lépés'],
-      use:['Pólók és pulóverek','Egyedi textil ajándéktárgyak','Kis szériás ruházati gyártás']
+      use:['Pólók és pulóverek','Egyedi textil ajándéktárgyak','Kis szériás ruházati gyártás'],
+      who:['Póló- és textilnyomó vállalkozásoknak, akik kis és közepes szériát is gyorsan ki akarnak szolgálni','Egyedi ajándéktárgyakat készítőknek, akiknek fontos a tiszta, por nélküli munkakörnyezet','Kezdő textilnyomóknak, mert nem igényel előkezelést vagy nyomóformát']
     },
     uv6090:{
       intro:['A KJ-6090P egy gépben egyesíti a síkágyas és a tekercses UV nyomtatást. A tinta UV-fénytől azonnal megszárad, így a nyomat rögtön kezelhető, és sokféle felületre nyomtathatsz.','Ez a legsokoldalúbb belépő a személyre szabott termékek gyártásához.'],
       feat:['60 × 90 cm-es síkágy','Tekercses nyomtatás akár 60 cm szélességben','CMYK + fehér + lakk tinta: fehér alapozás és fényes lakkos kiemelés','UV DTF matricák nyomtatása'],
-      use:['Telefontokok','Akril táblák','Fa dobozok','UV DTF matricák','Bögre, toll (kiegészítővel)']
+      use:['Telefontokok','Akril táblák','Fa dobozok','UV DTF matricák','Bögre, toll (kiegészítővel)'],
+      who:['Induló, sokoldalú vállalkozásoknak, akik egy géppel több terméktípust is gyártanának','Ajándéktárgy- és reklámtárgy-gyártóknak (telefontok, akril, fa)','Vállalkozóknak, akiknek síkágyas és tekercses nyomtatásra is szükségük van']
     },
     tpu:{
       intro:['A KJ-604LUV textilekre szánt, 3D hatású logók és TPU felvarrók készítésére való. A nyomat kiemelkedő, hímzésre emlékeztető felületet kap, ezért prémium megjelenést ad sportruházatnak és kiegészítőknek.','A 60 cm széles tekercses gép négy Epson i3200-U1 nyomtatófejjel dolgozik.'],
       feat:['60 cm-es nyomtatási szélesség','4 × Epson i3200-U1 nyomtatófej','CMYK + W + W + V tintakonfiguráció','3D hímzéshatású, TPU alapú felvarrók'],
-      use:['Sportmezek','Sapkák','Táskák','Kabát felvarrók']
+      use:['Sportmezek','Sapkák','Táskák','Kabát felvarrók'],
+      who:['Sportmez- és csapatruházat-gyártóknak, akik hímzésszerű, prémium hatást szeretnének','Felvarrót és logót gyártó vállalkozásoknak, hagyományos hímzés helyett','Divat- és kiegészítőgyártóknak, akik egyedi, kiemelkedő textúrájú logót szeretnének']
     },
     gold:{
       intro:['A KJ-604GUV arany fóliahatású UV DTF matricák gyártására való. Az arany hatás igényes, csillogó megjelenést ad, így a termékek hangsúlyosan kiemelkednek.','A matrica felragasztható különféle felületekre, ezért kis szériában is gyorsan előállítható prémium termék.'],
       feat:['60 cm-es nyomtatási szélesség','4 × Epson i3200-U1 nyomtatófej','Arany fóliahatású UV DTF matricák'],
-      use:['Telefontokok','Bögrék','Akril termékek']
+      use:['Telefontokok','Bögrék','Akril termékek'],
+      who:['Prémium ajándéktárgy- és matricagyártóknak, akik igényesebb, csillogó megjelenést szeretnének kínálni','Vállalkozóknak, akik magasabb árszinten, egyedi termékekkel különböznének meg a versenytársaktól','Rendezvény- és céges ajándéktárgyakat készítőknek']
     },
     uv120:{
       intro:['A 120 × 120 cm-es UV síkágyas nyomtató nagy formátumú táblák és lapanyagok közvetlen nyomtatására szolgál. A nagy méretű asztal miatt egész táblák, dekorlapok vagy több kisebb munka is elfér egyszerre.','Négy Epson i3200-U1 nyomtatófejjel, UV-tintával dolgozik, a nyomat azonnal megszárad.'],
       feat:['120 × 120 cm-es nyomtatási felület','4 × Epson i3200-U1 nyomtatófej','UV síkágyas technológia, azonnali száradás'],
-      use:['Akril','Fa','Reklámtáblák','Dekorációs elemek']
+      use:['Akril','Fa','Reklámtáblák','Dekorációs elemek'],
+      who:['Reklám- és dekorációs cégeknek, akik nagy formátumú táblákat, lapanyagokat nyomtatnának','Gyártóknak, akiknek gyakran van egyszerre több, kisebb munkájuk egy nagy asztalon','Vállalkozóknak, akik nagyobb volumenű, ipari léptékű nyomtatásra váltanának']
     }
   };
   var dlg=document.getElementById('pm'),body=document.getElementById('pmBody');
@@ -528,10 +564,13 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
   function open(key){
     var d=P[key],card=document.querySelector('[data-pick="'+key+'"]').closest('.card');
     if(!d||!card)return;
-    var h='<h3 id="pmTitle">'+esc(card.querySelector('h3').textContent)+'</h3>';
+    var img=card.querySelector('.card-img img');
+    var h='<img class="pm-img" src="'+img.src+'" alt="'+esc(img.alt)+'" width="900" height="675">';
+    h+='<h3 id="pmTitle">'+esc(card.querySelector('h3').textContent)+'</h3>';
     h+=d.intro.map(function(p){return '<p>'+esc(p)+'</p>';}).join('');
     h+='<h4>Fő jellemzők</h4><ul>'+li(d.feat)+'</ul>';
     h+='<h4>Mire használható?</h4><ul>'+li(d.use)+'</ul>';
+    h+='<h4>Kinek jó?</h4><ul>'+li(d.who)+'</ul>';
     h+='<h4>Műszaki adatok</h4><dl class="specs">'+card.querySelector('.specs').innerHTML+'</dl>';
     h+='<div class="price">'+card.querySelector('.price').innerHTML+'</div>';
     h+='<div class="pm-cta"><a class="btn btn-red" href="#ajanlat" data-pick="'+key+'">Ajánlatot kérek</a><a class="btn btn-outline" href="tel:+36203639271">Hívj most</a></div>';
