@@ -1,6 +1,32 @@
 <!doctype html>
 <html lang="hu">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+window._kjFbInit=function(){
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1416705809908295');
+fbq('track', 'PageView');
+};
+(function(){
+  var c;try{c=localStorage.getItem('kj-cookie-consent');}catch(e){c=null;}
+  if(c==='all'){window._kjFbInit();}
+  else{document.addEventListener('kj-consent',function(e){
+    if(e.detail==='all'&&!window._kjFbLoaded){window._kjFbLoaded=true;window._kjFbInit();}
+  });}
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1416705809908295&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adatkezelési tájékoztató | KingJet Europe</title>
@@ -59,9 +85,10 @@
       <li><b>Google Ireland Ltd. (Gmail)</b> – e-mail fogadás és levelezés.</li>
       <li><b>Tárhelyszolgáltató</b> – a weboldal kiszolgálása.</li>
       <li><b>Google Fonts</b> – a betűtípusok betöltésekor a böngésződ kapcsolódik a Google szervereihez, így az IP-címed eljuthat a Google-hoz.</li>
+      <li><b>Meta Platforms Ireland Ltd. (Meta Pixel)</b> – hozzájárulásod esetén a látogatásodról és az esetleges ajánlatkérésről adatot küldünk a Meta részére, hogy mérjük és optimalizáljuk a Facebook/Instagram hirdetéseinket. A Pixel csak akkor töltődik be, ha a sütibeállításoknál elfogadod; részletek a <a href="sutik.html">Süti tájékoztatóban</a>.</li>
     </ul>
     <p>Egyes szolgáltatók az Európai Gazdasági Térségen kívül (pl. az Egyesült Államokban) is kezelhetnek adatot; ilyenkor a továbbítás az Európai Bizottság megfelelőségi határozatán vagy általános szerződési feltételein (SCC) alapul.</p>
-    <p>Az adataidat marketing célra nem adjuk át, és nem értékesítjük.</p>
+    <p>Az adataidat nem értékesítjük. Marketing célra – a Meta Pixelen keresztül – csak a hozzájárulásod esetén, hirdetéseink méréséhez és optimalizálásához adunk át adatot.</p>
 
     <h2>4. A te jogaid</h2>
     <ul>

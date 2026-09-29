@@ -1,6 +1,32 @@
 <!doctype html>
 <html lang="hu">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+window._kjFbInit=function(){
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1416705809908295');
+fbq('track', 'PageView');
+};
+(function(){
+  var c;try{c=localStorage.getItem('kj-cookie-consent');}catch(e){c=null;}
+  if(c==='all'){window._kjFbInit();}
+  else{document.addEventListener('kj-consent',function(e){
+    if(e.detail==='all'&&!window._kjFbLoaded){window._kjFbLoaded=true;window._kjFbInit();}
+  });}
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1416705809908295&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Süti tájékoztató | KingJet Europe</title>
@@ -33,13 +59,18 @@
     <p>A süti (cookie) egy kis szöveges fájl, amelyet a weboldal a böngésződben tárol. Segít az oldal működésében, a beállítások megjegyzésében vagy a látogatottság mérésében.</p>
 
     <h2>Milyen sütiket használunk?</h2>
-    <p>Az oldal jelenleg <b>nem használ marketing, statisztikai vagy követő sütit</b>. Nincs hirdetési vagy elemző szkript. Az alábbi technikai tárolást alkalmazzuk:</p>
+    <p>Az oldal működéséhez szükséges tárolást mindig alkalmazzuk. Marketing célú mérőkódot (Meta Pixel) csak akkor töltünk be, ha ehhez a sütibeállításoknál hozzájárulsz. Az alábbi tárolást alkalmazzuk:</p>
     <div class="table-scroll"><table>
       <thead><tr><th>Név</th><th>Típus</th><th>Cél</th><th>Érvényesség</th></tr></thead>
       <tbody>
         <tr><td>kj-cookie-consent</td><td>Szükséges (böngésző helyi tárolója)</td><td>Megjegyzi a süti-választásodat, hogy ne kérdezzünk újra</td><td>Amíg a böngészőből nem törlöd</td></tr>
+        <tr><td>_fbp</td><td>Marketing (csak hozzájárulással)</td><td>A Meta (Facebook) Pixel süti, hirdetéseink méréséhez és optimalizálásához</td><td>Legfeljebb 90 nap</td></tr>
+        <tr><td>fr</td><td>Marketing (csak hozzájárulással)</td><td>A Meta hirdetési rendszerének süti, ha Facebookra/Instagramra kattintva érkeztél</td><td>Legfeljebb 90 nap</td></tr>
       </tbody>
     </table></div>
+
+    <h2>Meta (Facebook) Pixel</h2>
+    <p>Hozzájárulásoddal a Meta Pixel nevű mérőkódot használjuk, amely segít megmérni, hogy a Facebook/Instagram hirdetéseink milyen eredményt hoznak, és ez alapján tudjuk optimalizálni őket. A Pixel az oldal meglátogatásáról (és, ha eljutsz odáig, az ajánlatkérésről) küld adatot a Meta Platforms Ireland Ltd. (Írország) részére. Ezek az adatok a Meta saját adatvédelmi szabályai szerint kerülnek kezelésre: <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta adatvédelmi szabályzata</a>. A Pixelt csak akkor töltjük be, ha az "Elfogadom" gombra kattintasz; ha csak a szükséges sütiket fogadod el, nem indul el.</p>
 
     <h2>Harmadik féltől származó tartalom</h2>
     <p>Az oldal a betűtípusokat a <b>Google Fonts</b> szolgáltatásból tölti be. Ilyenkor a böngésződ kapcsolatot létesít a Google szervereivel, és az IP-címed eljuthat hozzájuk. Részletek: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google adatvédelmi irányelvei</a>.</p>

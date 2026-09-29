@@ -1,6 +1,32 @@
 <!doctype html>
 <html lang="hu">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+window._kjFbInit=function(){
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1416705809908295');
+fbq('track', 'PageView');
+};
+(function(){
+  var c;try{c=localStorage.getItem('kj-cookie-consent');}catch(e){c=null;}
+  if(c==='all'){window._kjFbInit();}
+  else{document.addEventListener('kj-consent',function(e){
+    if(e.detail==='all'&&!window._kjFbLoaded){window._kjFbLoaded=true;window._kjFbInit();}
+  });}
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1416705809908295&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KingJet Europe – UV, DTF nyomtatók és vágógépek</title>
