@@ -39,10 +39,12 @@ footer nav a:hover,footer nav button:hover{color:var(--red)}
 .page .table-scroll{overflow-x:auto;border:3px solid var(--ink)}
 .page .table-scroll table{margin:0;min-width:640px}
 .msg{min-height:60vh;display:flex;align-items:center}
+.msg .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;margin-left:auto;margin-right:auto}
+.msg .bar{margin-left:auto;margin-right:auto}
 .msg .code{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:180px;line-height:.9;color:var(--red);margin:0}
 .msg p.lead{font-size:21px;color:var(--text);max-width:620px;margin:0 0 28px}
-.msg .ctas{display:flex;flex-wrap:wrap;gap:16px}
-.steps{margin:0 0 32px;padding:0;list-style:none;display:grid;gap:12px;max-width:620px}
+.msg .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.steps{margin:0 0 32px;padding:0;list-style:none;display:grid;gap:12px;max-width:620px;width:100%;text-align:left}
 .steps li{padding:14px 18px;background:var(--bg-alt);border-left:6px solid var(--red);font-size:17px}
 
 /* cookie banner */

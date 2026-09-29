@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="hu">
 <head>
+<meta charset="utf-8">
 <!-- Meta Pixel Code -->
 <script>
 window._kjFbInit=function(){
@@ -27,7 +28,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1416705809908295&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KingJet Europe – UV, DTF nyomtatók és vágógépek</title>
 <meta name="description" content="KingJet UV síkágyas, UV DTF, por nélküli DTF nyomtatók és vágóplotter nettó fix áron. Kérj ajánlatot!">
@@ -701,20 +701,47 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
   }
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    if(form.dataset.submitting)return;
     msg.classList.remove('on');
     if(form.elements._honey.value){window.location.href='koszonjuk.html';return;}
+    form.dataset.submitting='1';
     btn.disabled=true;btn.textContent='Küldés…';
-    var fd=new FormData(form);
-    fd.set('gep',sel.options[sel.selectedIndex].text);
-    try{var sp=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){if(sp.get(k))fd.set(k,sp.get(k));});}catch(e){}
-    fd.set('oldal',location.href.split('#')[0]);if(document.referrer)fd.set('hivatkozo',document.referrer);
-    fd.delete('adatkezeles');fd.set('adatkezelesi tajekoztato elfogadva','igen');
-    fetch('https://formsubmit.co/ajax/mullerdanielev@gmail.com',{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+
+    // tiszta, olvasható mezőnevekkel épített e-mail a FormSubmit-nek
+    var out=new FormData();
+    out.set('_subject','Új érdeklődő – KingJet Europe ajánlatkérés');
+    out.set('_template','table');
+    out.set('_captcha','false');
+    out.set('_next',form.elements._next.value);
+    out.set('Név',form.elements.nev.value);
+    out.set('Cégnév',form.elements.ceg.value);
+    out.set('Cég székhelye',form.elements.szekhely.value);
+    out.set('Telefonszám',form.elements.telefon.value);
+    out.set('E-mail',form.elements.email.value);
+    out.set('Melyik gép érdekli',sel.options[sel.selectedIndex].text);
+    if(form.elements.uzenet.value)out.set('Üzenet',form.elements.uzenet.value);
+    out.set('Adatkezelési tájékoztató elfogadva','Igen');
+    out.set('Oldal',location.href.split('#')[0]);
+    if(document.referrer)out.set('Hivatkozó oldal',document.referrer);
+    try{
+      var sp=new URLSearchParams(location.search),utmLabels={utm_source:'UTM forrás',utm_medium:'UTM közeg',utm_campaign:'UTM kampány',utm_term:'UTM kulcsszó',utm_content:'UTM tartalom'};
+      Object.keys(utmLabels).forEach(function(k){if(sp.get(k))out.set(utmLabels[k],sp.get(k));});
+    }catch(e){}
+
+    fetch('https://formsubmit.co/ajax/mullerdanielev@gmail.com',{method:'POST',body:out,headers:{'Accept':'application/json'}})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
       .then(function(x){
-        if(x.ok&&String(x.j.success)!=='false')window.location.href='koszonjuk.html';else fail();
+        if(x.ok&&String(x.j.success)!=='false'){
+          try{
+            if(window.fbq){
+              var eid='lead_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+              fbq('track','Lead',{content_name:'Ajánlatkérés',content_category:sel.value},{eventID:eid});
+            }
+          }catch(e){}
+          window.location.href='koszonjuk.html';
+        }else{delete form.dataset.submitting;fail();}
       })
-      .catch(fail);
+      .catch(function(){delete form.dataset.submitting;fail();});
   });
 })();
 </script>
