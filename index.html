@@ -133,6 +133,17 @@ footer nav{gap:28px}footer nav a{color:var(--muted)}
   .products,.compare,.quote{padding:48px 0}
   .sec-head h2,.compare h2,.quote-info h2{font-size:36px}
   .display{overflow-wrap:break-word;hyphens:auto}
+  .table-scroll{overflow-x:visible;border:0}
+  .compare table{min-width:0;width:100%;border-collapse:separate;border-spacing:0 14px}
+  .compare thead{display:none}
+  .compare tbody,.compare tr,.compare td{display:block;width:100%}
+  .compare tr{border:3px solid var(--ink);background:#fff}
+  .compare td{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-top:1px solid var(--line);white-space:normal;text-align:right}
+  .compare td::before{content:attr(data-label);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);text-align:left;flex-shrink:0}
+  .compare td:first-child{border-top:0;background:var(--ink)}
+  .compare td:first-child::before{content:none}
+  .compare td:first-child .tbl-link{color:#fff;font-size:17px;text-decoration-color:#fff}
+  .compare td:last-child{font-size:18px}
   .grid{grid-template-columns:1fr;gap:24px}
   .card h3,.card .lead{min-height:0}
   .card-body{padding:22px 20px 24px}
@@ -148,7 +159,7 @@ footer nav{gap:28px}footer nav a{color:var(--muted)}
 dialog.pm{border:3px solid var(--ink);border-top:8px solid var(--red);padding:0;max-width:760px;width:calc(100% - 32px);max-height:calc(100vh - 32px);background:#fff;color:var(--ink);overflow:auto}
 dialog.pm::backdrop{background:rgba(0,0,0,.6)}
 .pm-in{padding:32px 36px 36px;display:flex;flex-direction:column;gap:18px}
-.pm-img{width:calc(100% + 72px);margin:-32px -36px 4px;display:block;aspect-ratio:4/3;object-fit:cover;background:var(--bg-alt);border-bottom:3px solid var(--ink)}
+.pm-img{width:calc(100% + 72px);margin:-32px -36px 4px;display:block;aspect-ratio:4/3;max-height:42vh;object-fit:cover;background:var(--bg-alt);border-bottom:3px solid var(--ink)}
 .pm-x{position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;background:var(--ink);color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:2}
 .pm-x:hover{background:var(--red)}
 .pm h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:40px;line-height:1;margin:0;padding-right:44px}
@@ -174,7 +185,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 .kj-cookie .btn{min-height:44px;padding:10px 20px;font-size:15px}
 @media (max-width:720px){
   .pm-in{padding:24px 20px 28px}.pm h3{font-size:32px}
-  .pm-img{width:calc(100% + 40px);margin:-24px -20px 4px}
+  .pm-img{width:calc(100% + 40px);margin:-24px -20px 4px;max-height:34vh}
   .kj-cookie .btn{flex:1 1 100%}
 }
 
@@ -223,6 +234,19 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 .cta-band .btn-outline{background:transparent;color:#fff;border-color:#fff}
 .cta-band .btn-outline:hover{background:#fff;color:var(--ink)}
 .cta-inline{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:36px;padding-top:28px;border-top:2px solid var(--line);font-size:16px;color:var(--text)}
+.helper-cta{margin-top:40px;background:#fff;border:3px solid var(--ink);border-left:8px solid var(--red);padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.helper-cta .q{flex-shrink:0;width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:28px;display:flex;align-items:center;justify-content:center}
+.helper-cta .txt{display:flex;flex-direction:column;gap:2px;flex:1 1 320px}
+.helper-cta b{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:600;font-size:24px;line-height:1.15}
+.helper-cta span{color:var(--muted);font-size:15px}
+.helper-cta .btn{flex-shrink:0}
+.helper-cta-btns{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+@media (max-width:720px){
+  .helper-cta{padding:22px 20px;text-align:center;justify-content:center}
+  .helper-cta .txt{align-items:center}
+  .helper-cta .btn{width:100%}
+  .helper-cta-btns{width:100%;flex-direction:column}
+}
 .reassure{font-size:14px;color:var(--muted);margin:0}
 .reassure a{color:var(--ink);font-weight:600}
 .msticky{display:none}
@@ -310,7 +334,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
     </div>
     <div class="grid">
       <article class="card" data-cat="matrica">
-        <div class="card-img" data-info="plotter"><img src="images/vagoplotter-sikagyas.webp" alt="Síkágyas vágóplotter" loading="lazy" width="900" height="675"><span class="tag">VÁGÓPLOTTER</span></div>
+        <div class="card-img" data-info="plotter"><img src="images/vagoplotter-sikagyas.webp" alt="Síkágyas vágóplotter" loading="lazy" width="1200" height="900"><span class="tag">VÁGÓPLOTTER</span></div>
         <div class="card-body">
           <div><h3>Síkágyas vágóplotter</h3><p class="lead">Matricák és címkék pontos kontúrvágása nagy íven.</p></div>
           <dl class="specs"><div><dt>Vágóasztal</dt><dd>70 × 90 cm</dd></div><div><dt>Típus</dt><dd>Síkágyas vágóasztal</dd></div><div><dt>Felhasználás</dt><dd>Kontúrvágás</dd></div></dl>
@@ -321,7 +345,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
       <article class="card" data-cat="textil">
-        <div class="card-img" data-info="dtf"><img src="images/dtf-por-nelkuli.webp" alt="Por nélküli DTF nyomtató" loading="lazy" width="900" height="675"><span class="tag">DTF</span></div>
+        <div class="card-img" data-info="dtf"><img src="images/dtf-por-nelkuli.webp" alt="Por nélküli DTF nyomtató" loading="lazy" width="1200" height="900"><span class="tag">DTF</span></div>
         <div class="card-body">
           <div><h3>Por nélküli DTF nyomtató</h3><p class="lead">Textilnyomás porozás nélkül, 60 cm-es tekercsről.</p></div>
           <dl class="specs"><div><dt>Nyomtatási szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200</dd></div><div><dt>Technológia</dt><dd>Por nélküli DTF</dd></div></dl>
@@ -332,7 +356,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
       <article class="card" data-cat="telefontok tabla matrica">
-        <div class="card-img" data-info="uv6090"><img src="images/uv-nyomtato-kj-6090p.webp" alt="KingJet KJ-6090P UV nyomtató" loading="lazy" width="900" height="675"><span class="tag">UV SÍKÁGY</span></div>
+        <div class="card-img" data-info="uv6090"><img src="images/uv-nyomtato-kj-6090p.webp" alt="KingJet KJ-6090P UV nyomtató" loading="lazy" width="1200" height="900"><span class="tag">UV SÍKÁGY</span></div>
         <div class="card-body">
           <div><h3>KingJet KJ-6090P UV nyomtató</h3><p class="lead">Síkágyas és tekercses UV nyomtatás egy gépen.</p></div>
           <dl class="specs"><div><dt>Síkágy</dt><dd>60 × 90 cm</dd></div><div><dt>Tekercses nyomtatás</dt><dd>Akár 60 cm</dd></div><div><dt>Tinta</dt><dd>CMYK + fehér + lakk</dd></div></dl>
@@ -343,7 +367,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
       <article class="card" data-cat="textil">
-        <div class="card-img" data-info="tpu"><img src="images/uv-dtf-kj-604luv.webp" alt="KingJet KJ-604LUV" loading="lazy" width="900" height="675"><span class="tag">UV DTF</span></div>
+        <div class="card-img" data-info="tpu"><img src="images/uv-dtf-kj-604luv.webp" alt="KingJet KJ-604LUV" loading="lazy" width="1200" height="900"><span class="tag">UV DTF</span></div>
         <div class="card-body">
           <div><h3>KingJet KJ-604LUV</h3><p class="lead">3D hímzéshatású textillogók és TPU felvarrók.</p></div>
           <dl class="specs"><div><dt>Szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Tinta</dt><dd>CMYK + W + W + V</dd></div></dl>
@@ -354,7 +378,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
       <article class="card" data-cat="telefontok matrica">
-        <div class="card-img" data-info="gold"><img src="images/uv-dtf-kj-604guv-arany.webp" alt="KingJet KJ-604GUV aranyhatású" loading="lazy" width="900" height="675"><span class="tag">UV DTF</span></div>
+        <div class="card-img" data-info="gold"><img src="images/uv-dtf-kj-604guv-arany.webp" alt="KingJet KJ-604GUV aranyhatású" loading="lazy" width="1200" height="900"><span class="tag">UV DTF</span></div>
         <div class="card-body">
           <div><h3>KingJet KJ-604GUV aranyhatású</h3><p class="lead">Arany fóliahatású UV DTF matricák prémium termékekre.</p></div>
           <dl class="specs"><div><dt>Szélesség</dt><dd>60 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Effekt</dt><dd>Aranyhatás</dd></div></dl>
@@ -365,7 +389,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
       <article class="card" data-cat="tabla">
-        <div class="card-img" data-info="uv120"><img src="images/uv-sikagyas-120x120.webp" alt="KingJet UV síkágyas 120 × 120" loading="lazy" width="900" height="675"><span class="tag">UV SÍKÁGY</span></div>
+        <div class="card-img" data-info="uv120"><img src="images/uv-sikagyas-120x120.webp" alt="KingJet UV síkágyas 120 × 120" loading="lazy" width="1200" height="900"><span class="tag">UV SÍKÁGY</span></div>
         <div class="card-body">
           <div><h3>KingJet UV síkágyas 120 × 120</h3><p class="lead">Nagy formátumú UV nyomtatás táblákra és lapanyagokra.</p></div>
           <dl class="specs"><div><dt>Nyomtatási felület</dt><dd>120 × 120 cm</dd></div><div><dt>Nyomtatófej</dt><dd>4 × Epson i3200-U1</dd></div><div><dt>Technológia</dt><dd>UV síkágyas</dd></div></dl>
@@ -376,7 +400,14 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         </div>
       </article>
     </div>
-    <p class="cta-inline">Nem tudod, melyik gép illik hozzád? <a href="#ajanlat">Kérj ingyenes ajánlatot</a>, és segítünk kiválasztani.</p>
+    <div class="helper-cta">
+      <div class="q" aria-hidden="true">?</div>
+      <div class="txt">
+        <b>Nem tudod, melyik gép illik hozzád?</b>
+        <span>Írd meg, mire szeretnél nyomtatni, és mi segítünk kiválasztani a megfelelőt.</span>
+      </div>
+      <a class="btn btn-red" href="#ajanlat">Kérj ingyenes ajánlatot</a>
+    </div>
   </div>
 </section>
 
@@ -388,12 +419,12 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
       <table>
         <thead><tr><th>Gép</th><th>Technológia</th><th>Méret</th><th>Fejek</th><th>Tinta</th><th>Nettó ár</th></tr></thead>
         <tbody>
-          <tr><td><button type="button" class="tbl-link" data-info="plotter">Síkágyas vágóplotter</button></td><td>Vágóplotter</td><td>70 × 90 cm</td><td>–</td><td>–</td><td>2 500 000 Ft</td></tr>
-          <tr><td><button type="button" class="tbl-link" data-info="dtf">Por nélküli DTF nyomtató</button></td><td>Por nélküli DTF</td><td>60 cm tekercs</td><td>4 × Epson i3200</td><td>–</td><td>5 900 000 Ft</td></tr>
-          <tr><td><button type="button" class="tbl-link" data-info="uv6090">KingJet KJ-6090P UV nyomtató</button></td><td>UV síkágy + tekercs</td><td>60 × 90 cm</td><td>–</td><td>CMYK + W + lakk</td><td>6 900 000 Ft</td></tr>
-          <tr><td><button type="button" class="tbl-link" data-info="tpu">KingJet KJ-604LUV</button></td><td>UV DTF, 3D / TPU</td><td>60 cm tekercs</td><td>4 × i3200-U1</td><td>CMYK + W + W + V</td><td>6 900 000 Ft</td></tr>
-          <tr><td><button type="button" class="tbl-link" data-info="gold">KingJet KJ-604GUV aranyhatású</button></td><td>UV DTF, aranyhatás</td><td>60 cm tekercs</td><td>4 × i3200-U1</td><td>–</td><td>6 900 000 Ft</td></tr>
-          <tr><td><button type="button" class="tbl-link" data-info="uv120">KingJet UV síkágyas 120 × 120</button></td><td>UV síkágy</td><td>120 × 120 cm</td><td>4 × i3200-U1</td><td>UV</td><td>12 000 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="plotter">Síkágyas vágóplotter</button></td><td data-label="Technológia">Vágóplotter</td><td data-label="Méret">70 × 90 cm</td><td data-label="Fejek">–</td><td data-label="Tinta">–</td><td data-label="Nettó ár">2 500 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="dtf">Por nélküli DTF nyomtató</button></td><td data-label="Technológia">Por nélküli DTF</td><td data-label="Méret">60 cm tekercs</td><td data-label="Fejek">4 × Epson i3200</td><td data-label="Tinta">–</td><td data-label="Nettó ár">5 900 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="uv6090">KingJet KJ-6090P UV nyomtató</button></td><td data-label="Technológia">UV síkágy + tekercs</td><td data-label="Méret">60 × 90 cm</td><td data-label="Fejek">–</td><td data-label="Tinta">CMYK + W + lakk</td><td data-label="Nettó ár">6 900 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="tpu">KingJet KJ-604LUV</button></td><td data-label="Technológia">UV DTF, 3D / TPU</td><td data-label="Méret">60 cm tekercs</td><td data-label="Fejek">4 × i3200-U1</td><td data-label="Tinta">CMYK + W + W + V</td><td data-label="Nettó ár">6 900 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="gold">KingJet KJ-604GUV aranyhatású</button></td><td data-label="Technológia">UV DTF, aranyhatás</td><td data-label="Méret">60 cm tekercs</td><td data-label="Fejek">4 × i3200-U1</td><td data-label="Tinta">–</td><td data-label="Nettó ár">6 900 000 Ft</td></tr>
+          <tr><td data-label="Gép"><button type="button" class="tbl-link" data-info="uv120">KingJet UV síkágyas 120 × 120</button></td><td data-label="Technológia">UV síkágy</td><td data-label="Méret">120 × 120 cm</td><td data-label="Fejek">4 × i3200-U1</td><td data-label="Tinta">UV</td><td data-label="Nettó ár">12 000 000 Ft</td></tr>
         </tbody>
       </table>
     </div>
@@ -436,7 +467,17 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
     <details><summary>Mit jelent a por nélküli DTF?</summary><p>A hagyományos DTF-nél a nyomtatás után porozni kell a fóliát. A por nélküli technológiánál ez a lépés kimarad, így egyszerűbb a folyamat és tisztább a munkakörnyezet.</p></details>
     <details><summary>Melyik gép való telefontokra?</summary><p>Telefontokra a KingJet KJ-6090P UV nyomtató és az arany hatású KJ-604GUV UV DTF gép is alkalmas. Írd meg az igényed, és segítünk kiválasztani a megfelelőt.</p></details>
     <details><summary>Segítetek a szállításban és a telepítésben?</summary><p>Az ajánlatkérés után egyeztetjük veled a konfigurációt, a szállítást és a telepítést.</p></details>
-    <p class="cta-inline">Nem találtad a válaszod? <a href="tel:+36203639271">Hívj minket</a>, vagy <a href="#ajanlat">kérj ajánlatot</a>.</p>
+    <div class="helper-cta">
+      <div class="q" aria-hidden="true">?</div>
+      <div class="txt">
+        <b>Nem találtad a válaszod?</b>
+        <span>Hívj minket, vagy küldd el a kérdésed az ajánlatkérő űrlapon.</span>
+      </div>
+      <div class="helper-cta-btns">
+        <a class="btn btn-outline" href="tel:+36203639271">Hívj minket</a>
+        <a class="btn btn-red" href="#ajanlat">Kérj ajánlatot</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -565,7 +606,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
     var d=P[key],card=document.querySelector('[data-pick="'+key+'"]').closest('.card');
     if(!d||!card)return;
     var img=card.querySelector('.card-img img');
-    var h='<img class="pm-img" src="'+img.src+'" alt="'+esc(img.alt)+'" width="900" height="675">';
+    var h='<img class="pm-img" src="'+img.src+'" alt="'+esc(img.alt)+'" width="1200" height="900">';
     h+='<h3 id="pmTitle">'+esc(card.querySelector('h3').textContent)+'</h3>';
     h+=d.intro.map(function(p){return '<p>'+esc(p)+'</p>';}).join('');
     h+='<h4>Fő jellemzők</h4><ul>'+li(d.feat)+'</ul>';
