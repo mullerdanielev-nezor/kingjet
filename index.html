@@ -528,6 +528,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
         <input type="hidden" name="_subject" value="Új ajánlatkérés – KingJet Europe">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" id="nextField" value="koszonjuk.html">
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label>Név *<input required type="text" name="nev" autocomplete="name"></label>
         <label>Cégnév *<input required type="text" name="ceg" autocomplete="organization"></label>
@@ -692,6 +693,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
   }
 
   var form=document.getElementById('quoteForm'),msg=document.getElementById('formMsg');
+  try{document.getElementById('nextField').value=location.origin+'/koszonjuk.html';}catch(e){}
   var btn=form.querySelector('button[type=submit]');
   function fail(){
     msg.textContent='Az űrlap elküldése nem sikerült. Kérjük, próbáld újra, vagy hívj minket: +36 20 363 9271, illetve írj ide: info@kingjeteurope.com';
