@@ -40,7 +40,7 @@ src="https://www.facebook.com/tr?id=1416705809908295&ev=PageView&noscript=1"
 <meta name="theme-color" content="#d90d1e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--red:#d90d1e;--red-dark:#a00a16;--ink:#0a0a0a;--text:#333;--muted:#555;--line:#d6d6d6;--bg:#fff;--bg-alt:#f2f2f2;--chip:#efefef;--pad:80px}
 *{box-sizing:border-box}
@@ -69,9 +69,9 @@ nav a.link{color:var(--ink);text-decoration:none}nav a.link:hover{color:var(--re
 .hero{background:#fff;border-bottom:3px solid var(--ink);padding:52px 0}
 .hero .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;max-width:720px}
 .hero-logo{width:260px;height:auto;display:block}
-.eyebrow{font-size:14px;font-weight:700;letter-spacing:3px;color:var(--red)}
+.eyebrow{font-size:17px;font-weight:700;letter-spacing:.2px;color:var(--red);max-width:480px}
 .hero-bar{width:80px;height:7px;background:var(--red)}
-.hero h1{font-weight:700;font-size:46px;line-height:1.05;color:var(--ink)}
+.hero h1{font-weight:700;font-size:58px;line-height:1.03;color:var(--ink)}
 .hero p{margin:0;font-size:18px;color:var(--text);max-width:560px}
 .ctas{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
 
@@ -161,7 +161,8 @@ footer nav a:hover,footer nav button:hover{color:#fff}
   nav .btn{padding:10px 14px;font-size:14px;min-height:44px;white-space:nowrap}
   .hero{padding:36px 0}
   .hero-logo{width:190px}
-  .hero h1{font-size:32px}
+  .hero h1{font-size:38px}
+  .eyebrow{font-size:15px}
   .hero p{font-size:16px}
   .ctas .btn{flex:1 1 100%}
   .products,.compare,.quote{padding:48px 0}
@@ -311,7 +312,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top"><img class="logo-img" src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="1234" height="392"></a>
+    <a class="logo" href="#top"><img class="logo-img" src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="640" height="203"></a>
     <nav>
       <a class="link" href="#gepek">Gépek</a>
       <a class="link" href="#osszehasonlitas">Összehasonlítás</a>
@@ -325,8 +326,8 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <img class="hero-logo" src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="1234" height="392">
-    <div class="eyebrow">UV · DTF · VÁGÓPLOTTER</div>
+    <img class="hero-logo" src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="640" height="203" fetchpriority="high">
+    <div class="eyebrow">👋 Szia! Örülünk, hogy itt vagy — nézzük meg, melyik gép illik hozzád</div>
     <h1 class="display">Ipari nyomtatók és vágógépek, nettó fix áron</h1>
     <div class="hero-bar"></div>
     <p>Hat KingJet gép telefontokra, akrilra, fára, textilre és matricára. Válaszd ki a géped, és küldjük a pontos ajánlatot.</p>
@@ -568,7 +569,7 @@ footer nav button{color:var(--muted);background:none;border:0;padding:0;font:inh
 <footer>
   <div class="wrap">
     <div>
-      <div class="footer-logo-plate"><img src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="1234" height="392"></div>
+      <div class="footer-logo-plate"><img src="images/kingjet-logo-transparent.webp" alt="KingJet Europe" width="640" height="203"></div>
       <div class="legal">Zeusz Group Kft. · Székhely: 1113 Budapest, Bartók Béla út 79. 2. em. 2. ajtó · Adószám: 33033026-2-43 · Cégjegyzékszám: 01-09-455504</div>
     </div>
     <nav>
